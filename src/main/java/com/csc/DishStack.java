@@ -25,6 +25,12 @@ public class DishStack {
     return dishes[size-1];
   }
 
+  void clear(){
+    for(int i = 0; i < size; i++){
+      dishes[i] = null;
+    }
+    size = 0;
+  }
 
   public static void main(String[] args) {
     DishStack stack = new DishStack();
@@ -69,6 +75,9 @@ public class DishStack {
 // The variable finalSize should equal two.
     int finalSize = stack.size();
     System.out.println("Final size: " + finalSize);
+    stack.clear();
+    System.out.println("Clearing...");
+    System.out.println("Size after clear: " + stack.size());
   }
 }
 
